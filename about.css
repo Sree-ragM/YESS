@@ -1,0 +1,198 @@
+/* ====== Reset ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fbeeca;
+    color: #333;
+}
+
+/* ====== Navbar ====== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3c5857;
+    color: white;
+    padding: 0;
+    overflow: hidden;
+    height: 100px;
+}
+
+.angled-bg {
+    padding: 1rem 15rem;
+    background: #6caea3;
+    clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
+    width: 280px;
+    /* adjust width as needed */
+    height: 120px;
+    /* controls vertical size */
+    display: flex;
+    align-items: center;
+    /* vertically center */
+    justify-content: center;
+    /* horizontally center */
+}
+
+.angled-bg img {
+    height: 120px;
+    width: auto;
+    margin-right: 120px;
+    margin-top: 40px;
+}
+
+/* Nav links */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    margin-right: 6rem;
+
+}
+
+.navbar a {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcb05;
+}
+
+/* About */
+
+
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 15px;
+    width: 1450px;
+}
+
+.about-card {
+    /* max-width: 750px; */
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- IMAGE --- */
+.img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 700px;
+    height: 400px;
+    margin-left: 100px;
+    filter: brightness(125%);
+}
+
+
+/* --- TITLE ON IMAGE --- */
+.img-container h1 {
+    position: absolute;
+    bottom: 15px;
+    left: 706px;
+    font-family: "Playfair Display", serif;
+    font-size: 6rem;
+    color: #222;
+    font-weight: 600;
+}
+
+/* --- DECORATIVE SQUARES --- */
+.decor-squares {
+    position: absolute;
+    top: 1px;
+    right: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.decor-squares span {
+    width: 45px;
+    height: 45px;
+}
+.decor-squares span:nth-child(1) {
+    background: #e2d5b0;
+}
+
+.decor-squares span:nth-child(2) {
+    background: #ecdfba;
+}
+
+.decor-squares span:nth-child(3) {
+    background: #f1e4c0;
+}
+
+.decor-squares span:nth-child(4) {
+    background: #f4e7c2;
+    /* lightest */
+}
+
+/* --- ICONS --- */
+.img-icons {
+    position: absolute;
+    top: 190px;
+    right: 420px;
+    z-index: 2;
+    display: flex;
+    gap: 12px;
+    font-size: 30px;
+}
+
+.icons i {
+    font-size: larger;
+    color: #101010;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.icons i:hover {
+    color: #b36f34;
+}
+
+/* --- TEXT CONTENT --- */
+.about-text {
+    padding: 20px 30px 35px 30px;
+    text-align: justify;
+    line-height: 1.7;
+    font-size: 0.97rem;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .img-container {
+        height: 200px;
+    }
+
+    .img-container h1 {
+        font-size: 2rem;
+        left: 20px;
+        bottom: 10px;
+    }
+
+    .about-text {
+        padding: 15px 20px 25px 20px;
+    }
+}
