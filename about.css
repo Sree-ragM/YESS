@@ -203,6 +203,129 @@ body {
     /* margin-top: 50px; */
 }
 
+/* Section Title */
+.activities-section {
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 50px;
+}
+
+.activities-section h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.activities-section h1 span {
+    color: #009688;
+    font-family: "Tinos", serif;
+    /* teal green */
+}
+
+/* Grid Layout */
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 30px;
+    width: 55%;
+    margin: auto;
+    margin-left: 310px;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+/* Cards */
+.activity-card {
+    background: white;
+    border-radius: 18px;
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.activity-card img {
+    width: 60px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+.activity-card p {
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: "Tinos", serif;
+}
+
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-title {
+    font-family: "Playfair Display", serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.team-title span {
+    color: #009688;
+}
+
+/* Team Grid - 5 per row like your image */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px 20px;
+    width: 90%;
+    margin: auto;
+}
+
+/* Team Member Card */
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 150px;
+    height: 150px;
+    /* object-fit: cover; */
+    border-radius: 50%;
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 5px 0 3px 0;
+}
+
+.team-card p {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    color: #444;
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    background: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+
+
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
     .img-container {
