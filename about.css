@@ -42,7 +42,7 @@ body {
     /* horizontally center */
 }
 
-.angled-bg img {
+.yess {
     height: 120px;
     width: auto;
     margin-right: 120px;
@@ -270,14 +270,15 @@ body {
 }
 
 .team-title {
-    font-family: "Playfair Display", serif;
+    font-family: "Tinos", serif;
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .team-title span {
     color: #009688;
+    font-family: "Tinos", serif;
 }
 
 /* Team Grid - 5 per row like your image */
@@ -321,8 +322,42 @@ body {
     background: white;
     text-align: center;
     padding: 18px;
-    font-size: 14px;
+    font-size: 17px;
+    font-weight: 600;
 }
+
+
+
+
+p,h2
+{
+    animation: text-appear ease-in both;
+    animation-timeline: view();
+}
+
+/* img {
+    animation: image-appear ease-in both;
+    animation-timeline: view();
+    animation-range: entry 20% 100vh;
+} */
+
+
+
+
+/* @keyframes image-appear {
+    from {
+        scale: .5;
+        translate: 0 2rem;
+    }
+} */
+
+@keyframes text-appear {
+    from {
+        opacity: 0;
+        translate: 0 8rem;
+    }
+}
+
 
 
 
