@@ -674,6 +674,45 @@ body {
 }
 
 
+.notice {
+    position: fixed;
+    top: 600px;
+    right: 20px;
+    min-width: 260px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 99;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+
+.notice-success {
+    background: rgba(255, 217, 122, 0.12);
+    /* light gold tint */
+    color: #000000;
+    border: 2px solid #caa851;
+    backdrop-filter: blur(5px);
+}
+
+.notice-error {
+    background: rgba(255, 138, 138, 0.12);
+    color: #000000;
+    border: 2px solid #c65656;
+    backdrop-filter: blur(5px);
+}
+
+.notice.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
 
 /* ===== Responsive Design ===== */
