@@ -19,18 +19,29 @@
     <header class="navbar">
         <div class="nav-left">
             <div class="angled-bg">
-                <img src="img/image 5.png" alt="YESS Logo" class="yess">
+                <img src="img/image 5.png" alt="YESS Logo">
             </div>
         </div>
-        <nav>
+    
+    
+        <!-- Navigation Menu -->
+        <nav class="nav-links" id="nav-links">
             <ul>
-                <li><a href="/index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About us</a></li>
                 <li><a href="activities.html">Activities</a></li>
-                <li><a href="index.html#contact">Contact us</a></li>
+                <li><a href="#contact">Contact us</a></li>
             </ul>
         </nav>
+    
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
     </header>
+
 
     <section class="about-section">
         <div class="about-card">
@@ -255,5 +266,36 @@
     </footer>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
+                // Mobile menu toggle
+                const menuToggle = document.querySelector('.menu-toggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                menuToggle.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                    menuToggle.classList.toggle('active');
+                });
+
+                // Navbar background change on scroll
+                window.addEventListener('scroll', function () {
+                    const navbar = document.querySelector('.navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+
+                const navItems = document.querySelectorAll('.nav-links a');
+                navItems.forEach(item => {
+                    item.addEventListener('click', function () {
+                        navLinks.classList.remove('active');
+                        menuToggle.classList.remove('active');
+                    });
+                });
+        });
+    </script>
 </body>
+</html>
