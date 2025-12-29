@@ -10,10 +10,11 @@ html {
     scroll-behavior: smooth;
     max-width: 100%;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body {
-    background-color: #fff;
+    background-color: #FFF8DE;
     color: #333;
     max-width: 100%;
     overflow-x: hidden;
@@ -98,7 +99,7 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #000;
+    /* background: #000; */
     overflow: hidden;
 }
 
@@ -216,7 +217,7 @@ body {
     justify-content: center;
     gap: 2rem;
     padding: 3rem 2rem;
-    background: #fff;
+    /* background: #fff; */
 }
 
 .about-content p {
@@ -249,7 +250,7 @@ body {
     align-items: center;
     width: 500px;
     height: 350px;
-    margin-right: 100px;
+    margin-bottom: 20px;
 }
 
 .circle.orange {
@@ -281,6 +282,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 500px;
+    margin-left: 20px;
 }
 
 .card1 img {
@@ -324,7 +326,7 @@ body {
     align-items: center;
     width: 500px;
     height: 350px;
-    margin-right: 100px;
+    margin-bottom: 20px;
 }
 
 .circle.pink {
@@ -420,7 +422,7 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem 2rem;
-    background: #fff;
+    /* background: #fff; */
     gap: 2rem;
 }
 
@@ -702,17 +704,141 @@ body {
     transform: translateY(0);
 }
 
+@media (max-width: 1300px) {
 
-/* ===============================
-   FULL RESPONSIVE DESIGN
-=============================== */
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* center horizontally */
+        justify-content: center;
+        /* center vertically */
+        text-align: center;
+        gap: 30px;
+        /* spacing between logo & text */
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .logo-card {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 800px;
+        height: 300px;
+    }
+
+    .about-content {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .circle.yellow {
+        width: 90px;
+        height: 90px;
+        transform: translate(-40%, -10%);
+    }
+
+    .circle.blue {
+        width: 110px;
+        height: 110px;
+        background: #7da4e0;
+        bottom: 0;
+        right: 0;
+        transform: translate(39%, 15%);
+    }
+    .mv-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 200px;
+        width: 85%;
+        max-width: 950px;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .mv-box {
+        max-width: 420px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* Shrink logo cards */
+    .logo-card1,
+    .logo-card2{
+        transform: scale(0.85);
+        transform-origin: center;
+    }
+    .card2{
+        width: 500px;
+        height: 320px;
+    }
+
+    .missionh,
+    .visionh {
+        font-size: 3.5rem;
+    }
+
+    .missionp,
+    .visionp {
+        font-size: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .logo-card1{
+        margin-left: 180px;
+    }
+
+    .circle.orange {
+        width: 90px;
+        height: 90px;
+        transform: translate(-41%, -20%);
+    }
+
+    .circle.green {
+        width: 110px;
+        height: 110px;
+        background: #3c8f7d;
+        bottom: 0;
+        right: 0;
+        transform: translate(46%, 20%);
+    }
+
+    .circle.pink {
+        width: 90px;
+        height: 90px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(497%, -20%);
+    }
+
+    .circle.blue1 {
+        width: 110px;
+        height: 110px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(-400%, 20%);
+    }
 
 
 
-/* ---------- MOBILE NAVBAR ---------- */
-@media (max-width: 900px) {
+}
 
-
+@media (max-width: 1200px) {
 
     .navbar {
         width: 100% !important;
@@ -775,14 +901,14 @@ body {
         margin-top: 20px;
         margin-right: 20px;
     }
-    
+
 
     .hero {
         min-height: 70vh;
         height: auto;
         min-height: auto;
         padding-bottom: 20px;
-        background:white;
+        /* background: white; */
 
     }
 
@@ -795,259 +921,297 @@ body {
     /* Make image auto-size and full width */
     .hero-image img {
         width: 100%;
-        /* full screen width */
         height: auto !important;
-        /* auto height = no zoom */
         object-fit: contain !important;
     }
-        /* Center content */
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 90%;
-            margin: 0 auto;
-            padding: 0;
-            color: black;
-            text-align: center;
-            margin-top: 90px;
-            margin-bottom: 60px;
-        }
-    
-        .hero-content h1 {
-            font-size: 2rem;
-        }
-    
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-        }
 
-        .logo-card, .logo-card1, .logo-card2, .logo-card3 {
-            margin-right: 0;
-            width: 300px;
-        }
-
-        .circle.yellow {
-            width: 90px;
-            height: 90px;
-            background: #ffe85f;
-            top: 0;
-            left: 0;
-            transform: translate(-40%, 45%);
-        }
-
-        .circle.blue {
-            width: 110px;
-            height: 110px;
-            background: #7da4e0;
-            bottom: 0;
-            right: 0;
-            transform: translate(39%, -25%);
-        }
-
-        .about-content p {
-            font-size: 1rem;
-        }
-
-        /* mission and vision */
-        .mv-wrapper {
-            grid-template-columns: 1fr;
-            gap: 50px;
-        }
-
-
-        .card1 img {
-            width: 230px;
-            height: auto;
-        }
-
-        .circle.orange {
-            width: 90px;
-            height: 90px;
-            transform: translate(-45%, 10%);
-        }
-
-        .circle.green {
-            width: 110px;
-            height: 110px;
-            background: #3c8f7d;
-            bottom: 0;
-            right: 0;
-            transform: translate(40%, 10%);
-        }
-        .missionh {
-            font-size: 4rem;
-        }
-
-        .missionp {
-            font-size: 1rem;
-            max-width: 350px;
-            margin-bottom: 30px;
-        }
-
-        .logo-card2 {
-            margin-right: 0;
-            width: 100px;
-        }
-
-        .logo-card2{
-            margin-bottom: 30px;
-            margin-left: 20px;
-        }
-
-        .card2{
-            height: 300px;
-        }
-        .card2 img {
-            width: 230px;
-            height: auto;
-        }
-
-        .circle.pink {
-            width: 90px;
-            height: 90px;
-            background: #f49e9f;
-            top: 0;
-            left: 0;
-            transform: translate(150%, -15%);
-        }
-
-        .circle.blue1 {
-            width: 110px;
-            height: 110px;
-            background: #caddfe;
-            bottom: 0;
-            right: 0;
-            transform: translate(-125%, 20%);
-        }
-
-        .visionh {
-            font-size: 4rem;
-        }
-
-        .visionp {
-            font-size: 1rem;
-            max-width: 350px;
-            margin-bottom: 50px;
-        }
-
-    .contact-section {
-        flex-direction: column;      /* stack items */
-        justify-content: center;      /* center vertically */
-        align-items: center;          /* center horizontally */
-        /* gap: 2rem; */
+    /* Center content */
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0;
+        color: black;
+        text-align: center;
+        margin-top: 90px;
+        margin-bottom: 60px;
     }
 
-        .logo-card3{
-            margin-bottom: 50px;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            /* margin-left: 30px; */
-        }
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
 
-                        .contact-left,
-                        .contact,
-                        .logo-card3 {
-                            margin: 0 auto;
-                            /* center sections */
-                        }
-        .card3{
-            width: 300px;
-            height: auto;
-            margin-bottom: 50px; 
-            /* margin-left: 13px; */
-        }
-        .card3 h1 {
-            font-size: 1.5rem;
-        }
-        .circle.grey {
-            width: 90px;
-            height: 90px;
-            transform: translate(-40%, -35%);
-        }
+    .hero-content p {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
 
-        .circle.black {
-            width: 100px;
-            height: 100px;
-            transform: translate(40%, -220%);
-        }
-
-        .contact-left{
-            margin-bottom: 50px;
-        }
-        .contact-section{
-            align-items: center;
-            justify-self: center;
-        }
-        .contact-info{
-            margin-top: 30px;
-            /* margin-left: 70px;         */
-        }
-
-        .footer-logo img {
-            width: 190px;
-            margin-bottom: 0;
-        }
-    
-        .footer-links {
-            flex-direction: column;
-            margin: 0;
-            text-align: center;
-            margin-top: 0;
-        }
-    
-        .links ul li a {
-            font-size: 1rem;
-        }
-    
-        .social-icons a {
-            font-size: 1.3rem;
-        }
-    
-        .footer-bottom {
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-        .footer-container {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 2rem;
-        }
-    
-        .footer-links {
-            margin-left: 0;
-            margin-top: 20px;
-            align-items: center;
-            gap: 1.5rem;
-        }
-    
-        .socials {
-            margin-left: 0;
-        }
-    
-        .footer-powered {
-            margin-top: 20px;
-            text-align: center;
-        }
+    .logo-card,
+    .logo-card1,
+    .logo-card2,
+    .logo-card3 {
+        margin: 0;
+    }
 
 
+    .logo-card3 {
+        width: 300px;
+    }
 
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            font-size: 1.2rem;
-        }
+    .circle.yellow {
+        width: 90px;
+        height: 90px;
+        background: #ffe85f;
+        top: 0;
+        left: 0;
+        transform: translate(-39%, 15%);
+    }
 
-        .footer-powered img {
-            width: 150px;
-        }
+    .circle.blue {
+        width: 110px;
+        height: 110px;
+        background: #7da4e0;
+        bottom: 0;
+        right: 0;
+        transform: translate(39%, -15%);
+    }
+
+    .about-content p {
+        font-size: 1.2rem;
+        width: 1000px;
+    }
+
+    /* mission and vision */
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 900px;
+        text-align: center;
+    }
+
+    .logo-card{
+        width: 450px;
+    }
+
+    .card{
+        width: 800px;
+        height: 250px;
+    }
+    .card1 img {
+        width: 330px;
+        height: auto;
+    }
+
+    .logo-card1 {
+        width: 650px;
+    }
+
+    .card1 {
+        width: 500px;
+        height: 350px;
+    }
+
+    .circle.orange {
+        width: 100px;
+        height: 100px;
+        transform: translate(45%, -30%);
+    }
+
+    .circle.green {
+        width: 120px;
+        height: 120px;
+        background: #3c8f7d;
+        bottom: 0;
+        right: 0;
+        transform: translate(-10%, 30%);
+    }
+
+    .missionh {
+        font-size: 4rem;
+    }
+
+    .missionp {
+        font-size: 1.2rem;
+        max-width: 600px;
+        width: 600px;
+        margin: 0  30px;
+        text-align: center;
+    }
+
+
+
+    .logo-card2 {
+        margin-right: 0;
+        width: 550px;
+        margin-bottom: 30px;
+        /* margin-left: 20px; */
+    }
+
+    .card2 {
+        width: 500px;
+        height: 350px;
+    }
+
+    .card2 img {
+        width: 330px;
+        height: auto;
+    }
+
+    .circle.pink {
+        width: 100px;
+        height: 100px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(-5%, -35%);
+    }
+
+    .circle.blue1 {
+        width: 120px;
+        height: 120px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(25%, 35%);
+    }
+
+    .visionh {
+        font-size: 4rem;
+    }
+
+    .visionp {
+        font-size: 1.2rem;
+        max-width: 600px;
+        width: 600px;
+        margin: 0 50px;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-card3 {
+        margin-bottom: 50px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        /* margin-left: 30px; */
+    }
+
+    .contact-left,
+    .contact,
+    .logo-card3 {
+        margin: 0 auto;
+        /* center sections */
+    }
+
+    .card3 {
+        width: 300px;
+        height: auto;
+        margin-bottom: 50px;
+        /* margin-left: 13px; */
+    }
+
+    .card3 h1 {
+        font-size: 1.5rem;
+    }
+
+    .circle.grey {
+        width: 90px;
+        height: 90px;
+        transform: translate(-40%, -35%);
+    }
+
+    .circle.black {
+        width: 100px;
+        height: 100px;
+        transform: translate(40%, -220%);
+    }
+
+    .contact-left {
+        margin-bottom: 50px;
+        width: 300px;
+        text-align: left;
+    }
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .contact-info {
+        margin-top: 30px;
+        /* margin-left: 70px;         */
+    }
+
+    .footer-logo img {
+        width: 190px;
+        margin-bottom: 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .links ul li a {
+        font-size: 1rem;
+    }
+
+    .social-icons a {
+        font-size: 1.3rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        margin-left: 0;
+        margin-top: 20px;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .socials {
+        margin-left: 0;
+    }
+
+    .footer-powered {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    .footer-powered img {
+        width: 150px;
+    }
 
 
 }
 
-@media (min-width: 500px) {
+@media (max-width: 900px) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -1055,6 +1219,17 @@ body {
     .hero-content p {
         font-size: 1.5rem;
     }
+
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     .mission-content p {
         font-size: 1.2rem;
@@ -1064,9 +1239,10 @@ body {
     .logo-card1,
     .logo-card2,
     .logo-card3 {
-        margin-right: 0;
+        margin: 0;
         width: 500px;
     }
+
 
 
     .circle.yellow {
@@ -1086,4 +1262,270 @@ body {
         right: 0;
         transform: translate(9%, -15%);
     }
+
+    .missionp {
+        font-size: 1rem;
+        max-width: 600px;
+        margin-bottom: 30px;
+    }
+
+    .visionp {
+        max-width: 520px;
+        font-size: 1rem;
+    }
+
+    .circle.pink {
+        width: 90px;
+        height: 90px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -15%);
+    }
+
+    .circle.blue1 {
+        width: 110px;
+        height: 110px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(35%, 20%);
+    }
+
+    .contact-left {
+        width: 500px
+    }
+
+    .logo-card3 {
+        justify-content: center;
+    }
+
+    .contact-section {
+        align-items: center;
+        justify-self: center;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .mission-content p {
+        font-size: 1.2rem;
+    }
+
+    .logo-card,
+    .logo-card1,
+    .logo-card2 {
+        margin: 0;
+        width: 500px;
+    }
+
+
+
+    .circle.yellow {
+        width: 100px;
+        height: 100px;
+        background: #ffe85f;
+        top: 0;
+        left: 0;
+        transform: translate(10%, 35%);
+    }
+
+    .circle.blue {
+        width: 130px;
+        height: 130px;
+        background: #7da4e0;
+        bottom: 0;
+        right: 0;
+        transform: translate(9%, -15%);
+    }
+
+    .missionp {
+        font-size: 1rem;
+        max-width: 600px;
+        margin-bottom: 30px;
+    }
+
+    .visionp {
+        max-width: 520px;
+        font-size: 1rem;
+    }
+
+    .circle.pink {
+        width: 90px;
+        height: 90px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -15%);
+    }
+
+    .circle.blue1 {
+        width: 110px;
+        height: 110px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(35%, 20%);
+    }
+
+    .contact-left {
+        width: 400px
+    }
+
+    .logo-card3 {
+        justify-content: center;
+    }
+    .card3{
+        margin: 0 auto;
+    }
+
+    .contact-section {
+        align-items: center;
+        justify-self: center;
+    }
+
+    .circle.grey {
+        transform: translate(65%, -40%);
+    }
+
+    .circle.black {
+        transform: translate(-60%, -210%);
+    }
+
+}
+
+@media ((min-width: 800px) and (max-width: 900px)) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        /* font-size: 1rem; */
+        width: auto;
+    }
+
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-card,
+    .logo-card1,
+    .logo-card2 {
+        margin: 0;
+        width: 250px;
+    }
+
+    .circle.yellow {
+        width: 100px;
+        height: 100px;
+        background: #ffe85f;
+        top: 0;
+        left: 0;
+        transform: translate(10%, 35%);
+    }
+
+    .circle.blue {
+        width: 130px;
+        height: 130px;
+        background: #7da4e0;
+        bottom: 0;
+        right: 0;
+        transform: translate(9%, -15%);
+    }
+
+    .missionp {
+        font-size: 1.2rem;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .visionp {
+        max-width: 350px;
+        font-size: 1.2rem;
+    }
+
+    .circle.pink {
+        width: 90px;
+        height: 90px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(-30%, -15%);
+    }
+
+    .circle.blue1 {
+        width: 110px;
+        height: 110px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(35%, 20%);
+    }
+
+    .contact-left {
+        width: 400px
+    }
+
+    .logo-card3 {
+        justify-content: center;
+    }
+
+    .card3 {
+        margin: 0 auto;
+    }
+
+    .contact-section {
+        align-items: center;
+        justify-self: center;
+    }
+
+    .circle.grey {
+        transform: translate(65%, -40%);
+    }
+
+    .circle.black {
+        transform: translate(-60%, -210%);
+    }
+
+    .info-item{
+        justify-content: left;
+        align-items: center;
+    }
+
+    .contact-info{
+        position: relative;
+        margin-left: 120px;
+    }
+
+
+
 }
