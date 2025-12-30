@@ -1413,7 +1413,7 @@ body {
 
 }
 
-@media ((min-width: 800px) and (max-width: 900px)) {
+@media ((min-width: 600px) and (max-width: 900px)) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -1441,7 +1441,7 @@ body {
     .logo-card1,
     .logo-card2 {
         margin: 0;
-        width: 250px;
+        width: 450px;
     }
 
     .circle.yellow {
@@ -1450,7 +1450,7 @@ body {
         background: #ffe85f;
         top: 0;
         left: 0;
-        transform: translate(10%, 35%);
+        transform: translate(-40%, 15%);
     }
 
     .circle.blue {
@@ -1459,18 +1459,30 @@ body {
         background: #7da4e0;
         bottom: 0;
         right: 0;
-        transform: translate(9%, -15%);
+        transform: translate(40%, -2%);
     }
 
     .missionp {
         font-size: 1.2rem;
-        max-width: 350px;
+        max-width: 550px;
         margin-bottom: 30px;
     }
 
     .visionp {
-        max-width: 350px;
+        max-width: 550px;
         font-size: 1.2rem;
+    }
+
+    .logo-card2 {
+        margin-right: 0;
+        width: 550px;
+        margin-bottom: 30px;
+        /* margin-left: 20px; */
+    }
+
+    .card2 {
+        width: 500px;
+        height: 350px;
     }
 
     .circle.pink {
@@ -1479,7 +1491,7 @@ body {
         background: #f49e9f;
         top: 0;
         left: 0;
-        transform: translate(-30%, -15%);
+        transform: translate(-20%, -35%);
     }
 
     .circle.blue1 {
@@ -1488,7 +1500,32 @@ body {
         background: #caddfe;
         bottom: 0;
         right: 0;
-        transform: translate(35%, 20%);
+        transform: translate(25%, 30%);
+    }
+
+
+    .logo-card1 {
+        width: 650px;
+    }
+
+    .card1 {
+        width: 500px;
+        height: 350px;
+    }
+
+    .circle.orange {
+        width: 100px;
+        height: 100px;
+        transform: translate(45%, -30%);
+    }
+
+    .circle.green {
+        width: 120px;
+        height: 120px;
+        background: #3c8f7d;
+        bottom: 0;
+        right: 0;
+        transform: translate(-10%, 30%);
     }
 
     .contact-left {
@@ -1525,7 +1562,175 @@ body {
         position: relative;
         margin-left: 120px;
     }
+}
 
 
 
+
+@media ((min-width: 300px) and (max-width: 600px)) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        /* font-size: 1rem; */
+        width: auto;
+    }
+
+    .mv-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-card,
+    .logo-card1,
+    .logo-card2 {
+        margin: 0;
+        width: 250px;
+    }
+
+.logo-card{
+    width: 300px;
+}
+    .card{
+        width: 450px;
+    }
+    .circle.yellow {
+        width: 90px;
+        height: 90px;
+        background: #ffe85f;
+        top: 0;
+        left: 0;
+        transform: translate(-40%, 15%);
+    }
+
+    .circle.blue {
+        width: 110px;
+        height: 110px;
+        background: #7da4e0;
+        bottom: 0;
+        right: 0;
+        transform: translate(40%, -2%);
+    }
+
+    .missionp {
+        font-size: 1.2rem;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .visionp {
+        max-width: 350px;
+        font-size: 1.2rem;
+    }
+
+                .logo-card1 {
+                    margin-right: 0;
+                    width: 450px;
+                    margin-bottom: 30px;
+                    /* margin-left: 20px; */
+                }
+    .card1{
+        width: 350px;
+        height: 400px;
+    }
+
+    .card1 img {
+        width: 300px;
+        height: auto;
+    }
+
+    .logo-card2 {
+        /* margin-right: 0; */
+        width: 550px;
+        margin-bottom: 30px;
+        /* margin-left: 20px; */
+    }
+
+    .card2 {
+        width: 390px;
+        height: 400px;
+    }
+    .card2 img {
+        width: 270px;
+        height: auto;
+    }
+
+    .circle.pink {
+        width: 90px;
+        height: 90px;
+        background: #f49e9f;
+        top: 0;
+        left: 0;
+        transform: translate(40%, -65%);
+    }
+
+    .circle.blue1 {
+        width: 110px;
+        height: 110px;
+        background: #caddfe;
+        bottom: 0;
+        right: 0;
+        transform: translate(-25%, 60%);
+    }
+
+
+    .circle.orange {
+        width: 100px;
+        height: 100px;
+        transform: translate(15%, -60%);
+    }
+
+    .circle.green {
+        width: 120px;
+        height: 120px;
+        background: #3c8f7d;
+        bottom: 0;
+        right: 0;
+        transform: translate(10%, 60%);
+    }
+
+    .contact-left {
+        width: 400px
+    }
+
+    .logo-card3 {
+        justify-content: center;
+    }
+
+    .card3 {
+        margin: 0 auto;
+    }
+
+    .contact-section {
+        align-items: center;
+        justify-self: center;
+    }
+
+    .circle.grey {
+        transform: translate(65%, -40%);
+    }
+
+    .circle.black {
+        transform: translate(-60%, -210%);
+    }
+
+    .info-item {
+        justify-content: left;
+        align-items: center;
+    }
+
+    .contact-info {
+        position: relative;
+        margin-left: 120px;
+    }
 }
