@@ -371,6 +371,7 @@ body {
 }
 
 
+
 @media (max-width: 900px) {
 
     .navbar {
@@ -444,7 +445,7 @@ body {
 ============================= */
 
 /* ---------- Large Tablets ---------- */
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
 
     .navbar {
