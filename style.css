@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: #FFF8DE;
+    background-color: #ffffff;
     color: #333;
     max-width: 100%;
     overflow-x: hidden;
@@ -25,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #3c5857;
+    background: #0F52BA;
     color: white;
     padding: 0;
     overflow: hidden;
@@ -35,7 +35,7 @@ body {
 
 .angled-bg {
     padding: 1rem 15rem;
-    background: #6caea3;
+    background: #ffffff;
     clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
     width: 280px;
     height: 120px;
@@ -45,10 +45,10 @@ body {
 }
 
 .angled-bg img {
-    height: 120px;
+    height: 90px;
     width: auto;
     margin-right: 120px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .menu-toggle {
@@ -94,52 +94,56 @@ body {
 }
 
 /* ====== Hero Section ====== */
+
 .hero {
-    position: relative;
+    display: flex;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    /* background: #000; */
+    width: 100%;
+    min-height: 90vh;
+    background: #ffffff;
+    padding: 0 6%;
     overflow: hidden;
 }
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* Left Content */
 .hero-content {
-    position: relative;
-    z-index: 1;
+    z-index: 2;
+    justify-content: center;
     text-align: left;
-    color: white;
-    max-width: 700px;
-    margin-top: 240px;
-    margin-left: 50px;
 }
 
 .hero-content h1 {
+    font-size: 62px;
+    font-weight: 700;
+    color: #0b3d91;
+    line-height: 1.2;
     font-family: "Tinos", serif;
-    font-size: 3.7rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
+    /* width: 580px; */
 }
 
 .hero-content p {
+    margin: 20px 0;
+    font-size: 28px;
+    color: #444;
     font-family: "Tinos", serif;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
 }
+
+
+/* Right Image */
+.hero-image {
+    width: 100%;
+    position: relative;
+}
+
+.hero-image img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+
+    /* Push image slightly left */
+    transform: translateX(-40px);
+}
+
 
 .hero-content button {
     background: #ffce0a;
@@ -488,6 +492,7 @@ body {
     align-items: center;
     width: 500px;
     height: 350px;
+    margin-right: 200px;
 }
 
 .circle.grey {
@@ -561,7 +566,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #1f1f1f;
+    background-color: #08244de9;
     color: rgb(255, 255, 255);
     padding: 40px 20px 20px;
     text-align: center;
@@ -872,10 +877,11 @@ body {
         left: -260px;
         width: 250px;
         height: 100vh;
-        background: #3c5857;
+        background: #ffffff;
         padding-top: 120px;
         transition: 0.4s;
         z-index: 1000;
+        
     }
 
     .nav-links.active {
@@ -887,6 +893,10 @@ body {
         gap: 2rem;
         margin: 0;
         padding-left: 30px;
+        color: #000000;
+    }
+    .nav-links li a {
+        color: #000000;
     }
 
     .angled-bg {
@@ -896,55 +906,33 @@ body {
     }
 
     .angled-bg img {
-        height: 90px;
+        height: 70px;
         margin: 0;
-        margin-top: 20px;
         margin-right: 20px;
     }
 
 
     .hero {
-        min-height: 70vh;
-        height: auto;
-        min-height: auto;
-        padding-bottom: 20px;
-        /* background: white; */
-
-    }
-
-    /* Reset the absolute height */
-    .hero-image {
-        position: relative;
-        height: auto;
-    }
-
-    /* Make image auto-size and full width */
-    .hero-image img {
-        width: 100%;
-        height: auto !important;
-        object-fit: contain !important;
-    }
-
-    /* Center content */
-    .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 90%;
-        margin: 0 auto;
-        padding: 0;
-        color: black;
+        flex-direction: column;
         text-align: center;
-        margin-top: 90px;
-        margin-bottom: 60px;
+        padding: 40px 5%;
+    }
+
+    .hero-content,
+    .hero-image {
+        /* width: 80%; */
+        text-align: center;
+        justify-content: center;
     }
 
     .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: 50px;
+        text-align: center;
     }
 
-    .hero-content p {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
+    .hero-image img {
+        transform: none;
+        margin-top: 30px;
     }
 
     .logo-card,
@@ -1094,19 +1082,21 @@ body {
     }
 
     .logo-card3 {
-        margin-bottom: 50px;
+        /* margin-bottom: 50px; */
         justify-content: center;
         text-align: center;
         align-items: center;
         /* margin-left: 30px; */
     }
 
-    .contact-left,
+    
     .contact,
     .logo-card3 {
         margin: 0 auto;
         /* center sections */
     }
+
+
 
     .card3 {
         width: 300px;
@@ -1415,11 +1405,12 @@ body {
 
 @media ((min-width: 600px) and (max-width: 900px)) {
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        text-align: center;
     }
 
     .hero-content p {
-        font-size: 1.5rem;
+        font-size: 2.2rem;
     }
 
     .about-content p {
@@ -1567,7 +1558,7 @@ body {
 
 
 
-@media ((min-width: 300px) and (max-width: 600px)) {
+@media ((min-width: 200px) and (max-width: 600px)) {
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -1598,9 +1589,9 @@ body {
         width: 250px;
     }
 
-.logo-card{
-    width: 300px;
-}
+    .logo-card{
+        width: 300px;
+    }
     .card{
         width: 450px;
     }
@@ -1633,12 +1624,12 @@ body {
         font-size: 1.2rem;
     }
 
-                .logo-card1 {
-                    margin-right: 0;
-                    width: 450px;
-                    margin-bottom: 30px;
-                    /* margin-left: 20px; */
-                }
+    .logo-card1 {
+        margin-right: 0;
+        width: 450px;
+        margin-bottom: 30px;
+        /* margin-left: 20px; */
+    }
     .card1{
         width: 350px;
         height: 400px;
@@ -1699,9 +1690,6 @@ body {
         transform: translate(10%, 60%);
     }
 
-    .contact-left {
-        width: 400px
-    }
 
     .logo-card3 {
         justify-content: center;
@@ -1714,6 +1702,7 @@ body {
     .contact-section {
         align-items: center;
         justify-self: center;
+        
     }
 
     .circle.grey {

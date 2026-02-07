@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #3c5857;
+    background: #0F52BA;
     color: white;
     padding: 0;
     overflow: hidden;
@@ -29,7 +29,7 @@ body {
 
 .angled-bg {
     padding: 1rem 15rem;
-    background: #6caea3;
+    background: #ffffff;
     clip-path: polygon(0 0, 80% 0, 95% 100%, 0% 100%);
     width: 280px;
     height: 120px;
@@ -39,10 +39,10 @@ body {
 }
 
 .angled-bg img {
-    height: 120px;
+    height: 90px;
     width: auto;
     margin-right: 120px;
-    margin-top: 40px;
+    /* margin-top: 40px; */
 }
 
 .menu-toggle {
@@ -95,6 +95,7 @@ body {
     letter-spacing: 4px;
     font-weight: 800;
     font-family: "Tinos", serif;
+    color: #0F52BA;
 
 }
 
@@ -113,7 +114,6 @@ body {
     max-width: 350px;
     border-radius: 15px;
     border: 2px solid #d4a746;
-    /* Gold border */
     overflow: hidden;
     text-align: center;
     padding-bottom: 20px;
@@ -138,8 +138,7 @@ body {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 8px;
-    color: #ffd97a;
-    /* Light gold */
+    color: #0F52BA;    /* Light gold */
 }
 
 .activity-content p {
@@ -149,11 +148,19 @@ body {
 
 
 .footer {
-    margin-top: 60px;
     background: white;
     text-align: center;
     padding: 18px;
     font-size: 17px;
+    font-weight: 600;
+    margin-top: 170px;
+}
+
+.footer-link {
+    color: inherit;
+    /* Same color as footer text */
+    text-decoration: none;
+    /* Remove underline */
     font-weight: 600;
 }
 
@@ -191,10 +198,14 @@ body {
                 left: -260px;
                 width: 250px;
                 height: 100vh;
-                background: #3c5857;
+                background: #ffffff;
                 padding-top: 120px;
                 transition: 0.4s;
                 z-index: 1000;
+            }
+
+            .nav-links li a{
+                color: black;
             }
         
             .nav-links.active {
@@ -215,9 +226,9 @@ body {
             }
         
             .angled-bg img {
-                height: 90px;
+                height: 70px;
                 margin: 0;
-                margin-top: 20px;
+                /* margin-top: 20px; */
                 margin-right: 20px;
             }
 }
@@ -257,7 +268,7 @@ body {
         left: -260px;
         width: 250px;
         height: 100vh;
-        background: #3c5857;
+        background: #ffffff;
         padding-top: 120px;
         transition: 0.4s;
         z-index: 1000;
@@ -265,6 +276,10 @@ body {
 
     .nav-links.active {
         left: 0;
+    }
+
+    .nav-links li a{
+        color: black;
     }
 
     .nav-links ul {
@@ -281,9 +296,9 @@ body {
     }
 
     .angled-bg img {
-        height: 90px;
+        height: 70px;
         margin: 0;
-        margin-top: 20px;
+        /* margin-top: 20px; */
         margin-right: 20px;
     }
 
@@ -293,4 +308,6 @@ body {
     .activities-section{
         justify-content: center;
     }
+
+
 }
