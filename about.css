@@ -389,6 +389,51 @@ body {
 }
 
 
+/* Hide extra members */
+.hidden-member {
+    display: none;
+}
+
+/* Button container */
+.team-btn {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Button style */
+.team-btn button {
+    background: #0b3d91;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.team-btn button:hover {
+    background: #062c6f;
+}
+
+/* Team Grid Center Fix */
+.team-grid {
+    display: grid;
+
+    /* Fixed width columns */
+    grid-template-columns: repeat(auto-fit, 220px);
+
+    gap: 100px;
+
+    justify-content: center;
+}
+
+/* Center individual cards */
+.team-card {
+    justify-self: center;
+    text-align: center;
+}
+
 
 
 
