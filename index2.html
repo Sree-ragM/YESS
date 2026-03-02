@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YESS Launch</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+overflow-x:hidden;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:#fff;
+transition:0.8s;
+}
+
+.hero.blur{
+filter:blur(8px) scale(1.1);
+}
+
+/* TEXT */
+.hero h1{
+font-size:48px;
+font-weight:800;
+letter-spacing:2px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+}
+
+/* LAUNCH BUTTON */
+.launch-btn{
+font-size:30px;
+font-weight:700;
+letter-spacing:2px;
+padding:25px 70px;
+border-radius:60px;
+text-decoration:none;
+color:#fff;
+background:linear-gradient(135deg,#ff512f,#dd2476);
+box-shadow:0 15px 40px rgba(0,0,0,0.3);
+transition:0.3s;
+display:inline-flex;
+align-items:center;
+gap:15px;
+cursor:pointer;
+}
+
+.launch-btn:hover{
+transform:translateY(-8px) scale(1.05);
+}
+
+/* COUNTDOWN OVERLAY */
+.launch-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.75);
+backdrop-filter:blur(10px);
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+color:#fff;
+opacity:0;
+pointer-events:none;
+transition:0.5s;
+z-index:9999;
+}
+
+.launch-overlay.active{
+opacity:1;
+pointer-events:auto;
+}
+
+.countdown-number{
+font-size:120px;
+font-weight:800;
+animation:pop 1s ease;
+}
+
+@keyframes pop{
+0%{transform:scale(0.3);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+/* PROGRESS BAR */
+.progress-bar{
+width:250px;
+height:6px;
+background:#ffffff33;
+border-radius:10px;
+margin-top:30px;
+overflow:hidden;
+}
+
+.progress{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#ff512f,#dd2476);
+transition:1s linear;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.hero h1{font-size:34px;}
+
+.launch-btn{
+font-size:22px;
+padding:18px 45px;
+}
+
+.countdown-number{
+font-size:80px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="hero">
+
+<h1>
+YOUNG<br>
+ENTREPRENEURS<br>
+SCHOOL & SOCIETY
+</h1>
+
+<p>Be the change</p>
+
+<div class="launch-btn" onclick="startLaunch()">
+<i class="fa-solid fa-rocket"></i> LAUNCH
+</div>
+
+</section>
+
+<!-- COUNTDOWN SCREEN -->
+<div class="launch-overlay" id="launchOverlay">
+<div class="countdown-number" id="countdown">3</div>
+
+<div class="progress-bar">
+<div class="progress" id="progress"></div>
+</div>
+</div>
+
+<script>
+
+function startLaunch(){
+
+document.getElementById("hero").classList.add("blur");
+document.getElementById("launchOverlay").classList.add("active");
+
+let count = 3;
+let countdownEl = document.getElementById("countdown");
+let progress = document.getElementById("progress");
+
+let interval = setInterval(()=>{
+
+count--;
+countdownEl.textContent = count;
+countdownEl.style.animation = "none";
+void countdownEl.offsetWidth;
+countdownEl.style.animation = "pop 1s ease";
+
+progress.style.width = ( (3-count) * 33.3 ) + "%";
+
+if(count === 0){
+clearInterval(interval);
+countdownEl.textContent = "🚀";
+
+setTimeout(()=>{
+window.location.href = "index1.html";
+},800);
+}
+
+},1000);
+
+}
+
+</script>
+
+</body>
+</html>
